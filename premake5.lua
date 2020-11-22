@@ -3,6 +3,7 @@ project "assimp"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
+	systemversion "latest"
 
 	files
 	{
@@ -68,11 +69,20 @@ project "assimp"
 		"zlibstatic"
 	}
 
+	filter "configurations:Debug"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		runtime "Release"
+		optimize "on"
+
 project "zlibstatic"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
+	systemversion "latest"
 
 	files
 	{
@@ -113,3 +123,11 @@ project "zlibstatic"
 		"_CRT_SECURE_NO_DEPRECATE",
 		"_CRT_NONSTDC_NO_DEPRECATE",
 	}
+
+	filter "configurations:Debug"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		runtime "Release"
+		optimize "on"
