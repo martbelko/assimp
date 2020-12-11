@@ -71,11 +71,12 @@ project "assimp"
 
 	filter "configurations:Debug"
 		runtime "Debug"
-		symbols "on"
-
 	filter "configurations:Release"
 		runtime "Release"
-		optimize "on"
+
+	symbols "Off"
+	optimize "Speed"
+	inlining "Auto"
 
 project "zlibstatic"
 	kind "StaticLib"
@@ -126,8 +127,9 @@ project "zlibstatic"
 
 	filter "configurations:Debug"
 		runtime "Debug"
-		symbols "on"
-
 	filter "configurations:Release"
 		runtime "Release"
-		optimize "on"
+
+	symbols "Off"
+	optimize "Speed"
+	inlining "Auto"
