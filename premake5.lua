@@ -69,13 +69,9 @@ project "assimp"
 		"zlibstatic"
 	}
 
-	filter "configurations:Debug"
-		runtime "Debug"
-		symbols "on"
-
-	filter "configurations:Release"
-		runtime "Release"
-		optimize "on"
+	symbols "off"
+	runtime "Release"
+	optimize "full"
 
 project "zlibstatic"
 	kind "StaticLib"
